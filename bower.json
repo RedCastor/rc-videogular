@@ -1,0 +1,38 @@
+{
+  "name": "rc-videogular",
+  "version": "2.2.1",
+  "homepage": "https://redcastor.io",
+  "authors": [
+    "Auban le Grelle"
+  ],
+  "description": "Videogular bower package",
+  "keywords": [
+    "angular",
+    "redcastor",
+    "angularjs",
+    "directive",
+    "videogular"
+  ],
+  "main": [
+    "dist/videogular.js",
+    "dist/videogular.css",
+    "dist/fonts/videogular.svg",
+    "dist/fonts/videogular.eot",
+    "dist/fonts/videogular.ttf",
+    "dist/fonts/videogular.woff"
+  ],
+  "ignore": [
+    "**/.*",
+    "**/*.txt",
+    ".jscsrc",
+    ".jshintrc",
+    "node_modules",
+    "bower_components"
+  ],
+  "dependencies": {
+    "angular": "^1.3.x",
+    "angular-sanitize": "^1.3.x",
+    "vimeo-player-js": "^2.2.0"
+
+  }
+}

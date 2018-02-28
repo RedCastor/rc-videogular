@@ -15,11 +15,7 @@
   ],
   "main": [
     "dist/videogular.js",
-    "dist/videogular.css",
-    "dist/fonts/videogular.svg",
-    "dist/fonts/videogular.eot",
-    "dist/fonts/videogular.ttf",
-    "dist/fonts/videogular.woff"
+    "dist/videogular.css"
   ],
   "ignore": [
     "**/.*",

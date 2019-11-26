@@ -123,7 +123,9 @@
                     });
                     updateTime();
                     if (VG_UTILS.supportsLocalStorage()) {
-                        API.setVolume(parseFloat($window.localStorage.getItem(VG_VOLUME_KEY) || "1"));
+                        if (parseFloat($window.localStorage.getItem(VG_VOLUME_KEY) || "1") > 0) {
+                            API.mediaElement[0].muted = false;
+                        }
                     }
                     if (API.currentState !== VG_STATES.PLAY) {
                         var event = new CustomEvent("canplay");
@@ -145,9 +147,7 @@
                         iframe = document.createElement("iframe");
                         angular.element(API.mediaElement[0]).replaceWith(angular.element(iframe));
                     }
-                    iframe.src = "//player.vimeo.com/video/" + id + "?player_id=vimeoplayer";
-                    iframe.frameBorder = 0;
-                    iframe.scrolling = "no";
+                    iframe.src = "//player.vimeo.com/video/" + id + "?player_id=vimeoplayer&muted=1";
                     iframe.style.width = "100%";
                     iframe.style.height = "100%";
                     if (scope.$eval(fullscreen)) {

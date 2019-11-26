@@ -519,7 +519,7 @@ angular.module("com.2fdevs.videogular").controller("vgController", [ "$scope", "
         var targetTime = 1e3 * event.target.currentTime;
         var isLiveSourceOverride = this.activeSource && angular.isDefined(this.activeSource.isLive);
         this.updateBuffer(event);
-        if (event.target.duration !== Infinity && event.target.duration !== null && event.target.duration !== undefined && event.target.duration !== 1.7976931348623157e308) {
+        if (event.target.duration !== Infinity && event.target.duration !== null && event.target.duration !== undefined && event.target.duration !== 17976931348623157e292) {
             if (isVirtualClip) {
                 if (hasStartTimePlayed && (event.target.currentTime < this.startTime || event.target.currentTime - this.startTime > this.virtualClipDuration)) {
                     this.onComplete();
